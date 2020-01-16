@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\Olimpiada 2016\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Form1.resources
+C:\Users\User\Desktop\Olimpiada 2016\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Properties.Resources.resources
+C:\Users\User\Desktop\Olimpiada 2016\Good Food_sn\Good Food\obj\x86\Debug\Good Food.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Olimpiada 2016\Good Food_sn\Good Food\bin\Debug\Good Food.exe
+C:\Users\User\Desktop\Olimpiada 2016\Good Food_sn\Good Food\bin\Debug\Good Food.pdb
+C:\Users\User\Desktop\Olimpiada 2016\Good Food_sn\Good Food\obj\x86\Debug\Good Food.exe
+C:\Users\User\Desktop\Olimpiada 2016\Good Food_sn\Good Food\obj\x86\Debug\Good Food.pdb
