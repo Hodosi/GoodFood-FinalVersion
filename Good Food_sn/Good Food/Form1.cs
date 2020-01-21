@@ -11,9 +11,9 @@ using System.IO;
 
 namespace Good_Food
 {
-    public partial class Form1 : Form
+    public partial class Start : Form
     {
-        public Form1()
+        public Start()
         {
             InitializeComponent();
         }
@@ -24,6 +24,8 @@ namespace Good_Food
         {
             stergere();
             intializare();
+            string fn = Application.StartupPath + @"\Resurse_C#\good-food-4.jpg";
+            this.pictureBox1.Image = Image.FromFile(fn);
         }
         public static void stergere()
         {
@@ -69,6 +71,18 @@ namespace Good_Food
             }
 
             conn.closeConnection();
+        }
+
+        private void button_Inregistrare_Click(object sender, EventArgs e)
+        {
+            Creare_cont_client cl=new Creare_cont_client();
+            cl.ShowDialog();
+        }
+
+        private void button_Autentificare_Click(object sender, EventArgs e)
+        {
+            Autentificare_client aut = new Autentificare_client();
+            aut.ShowDialog();
         }
 
     }
