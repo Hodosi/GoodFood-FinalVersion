@@ -15,5 +15,32 @@ namespace Good_Food
         {
             InitializeComponent();
         }
+
+        CLIENT client = new CLIENT();
+
+        private void Autentificare_client_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Intra_Click(object sender, EventArgs e)
+        {
+            string email = this.textBox_email_Aut.Text;
+            string pass = this.textBox_pass_Aut.Text;
+
+            if (client.clientExists(email,pass))
+            {
+                int id = client.getClientId(email);
+                GLOBAL.GlobalClientid = id;
+                Optiuni op = new Optiuni();
+                op.ShowDialog();
+            }
+            else
+            {
+                this.textBox_email_Aut.ResetText();
+                this.textBox_pass_Aut.ResetText();
+                MessageBox.Show("Eroare autentificare!");
+            }
+        }
     }
 }

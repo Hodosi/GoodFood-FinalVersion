@@ -125,7 +125,7 @@
             // textBox_Prenume
             // 
             this.textBox_Prenume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Prenume.Location = new System.Drawing.Point(210, 252);
+            this.textBox_Prenume.Location = new System.Drawing.Point(212, 252);
             this.textBox_Prenume.Name = "textBox_Prenume";
             this.textBox_Prenume.Size = new System.Drawing.Size(274, 26);
             this.textBox_Prenume.TabIndex = 9;
@@ -143,6 +143,7 @@
             this.textBox_Parola.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Parola.Location = new System.Drawing.Point(210, 383);
             this.textBox_Parola.Name = "textBox_Parola";
+            this.textBox_Parola.PasswordChar = '*';
             this.textBox_Parola.Size = new System.Drawing.Size(274, 26);
             this.textBox_Parola.TabIndex = 11;
             // 
@@ -151,6 +152,7 @@
             this.textBox_Parola_Confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Parola_Confirm.Location = new System.Drawing.Point(210, 440);
             this.textBox_Parola_Confirm.Name = "textBox_Parola_Confirm";
+            this.textBox_Parola_Confirm.PasswordChar = '*';
             this.textBox_Parola_Confirm.Size = new System.Drawing.Size(274, 26);
             this.textBox_Parola_Confirm.TabIndex = 12;
             // 
@@ -171,6 +173,7 @@
             this.button_CreareCont.TabIndex = 14;
             this.button_CreareCont.Text = "Crearea Cont";
             this.button_CreareCont.UseVisualStyleBackColor = true;
+            this.button_CreareCont.Click += new System.EventHandler(this.button_CreareCont_Click);
             // 
             // Creare_cont_client
             // 

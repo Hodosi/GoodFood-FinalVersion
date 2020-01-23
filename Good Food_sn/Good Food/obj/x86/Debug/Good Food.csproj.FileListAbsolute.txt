@@ -13,3 +13,5 @@ C:\Users\User\Desktop\New folder\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Go
 C:\Users\User\Desktop\New folder\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Properties.Resources.resources
 C:\Users\User\Desktop\New folder\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good Food.csproj.GenerateResource.Cache
 C:\Users\User\Desktop\New folder\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Creare_cont_client.resources
+C:\Users\User\Desktop\New folder\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Autentificare_client.resources
+C:\Users\User\Desktop\New folder\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Optiuni.resources
