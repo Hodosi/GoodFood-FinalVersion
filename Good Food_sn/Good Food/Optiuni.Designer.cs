@@ -40,6 +40,7 @@
             this.textBox_Varsta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage_Comanda = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox_PretTotal = new System.Windows.Forms.TextBox();
             this.textBox_totalKcal = new System.Windows.Forms.TextBox();
             this.textBox_NecesarZilnic = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage_Meniu = new System.Windows.Forms.TabPage();
             this.tabPage_Grafic = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.id_produs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.denumire_produs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriere = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,7 +92,7 @@
             this.tabPage_CalulatorKcal.Location = new System.Drawing.Point(4, 33);
             this.tabPage_CalulatorKcal.Name = "tabPage_CalulatorKcal";
             this.tabPage_CalulatorKcal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_CalulatorKcal.Size = new System.Drawing.Size(737, 431);
+            this.tabPage_CalulatorKcal.Size = new System.Drawing.Size(868, 431);
             this.tabPage_CalulatorKcal.TabIndex = 0;
             this.tabPage_CalulatorKcal.Text = "CalulatorKcal";
             this.tabPage_CalulatorKcal.UseVisualStyleBackColor = true;
@@ -190,6 +190,15 @@
             this.tabPage_Comanda.Text = "Comanda";
             this.tabPage_Comanda.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(363, 338);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(313, 43);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Comanda";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // textBox_PretTotal
             // 
             this.textBox_PretTotal.Location = new System.Drawing.Point(150, 380);
@@ -260,13 +269,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(851, 278);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tabPage_Meniu
             // 
             this.tabPage_Meniu.Location = new System.Drawing.Point(4, 33);
             this.tabPage_Meniu.Name = "tabPage_Meniu";
             this.tabPage_Meniu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Meniu.Size = new System.Drawing.Size(737, 431);
+            this.tabPage_Meniu.Size = new System.Drawing.Size(868, 431);
             this.tabPage_Meniu.TabIndex = 2;
             this.tabPage_Meniu.Text = "Generare Meniu";
             this.tabPage_Meniu.UseVisualStyleBackColor = true;
@@ -275,19 +285,10 @@
             // 
             this.tabPage_Grafic.Location = new System.Drawing.Point(4, 33);
             this.tabPage_Grafic.Name = "tabPage_Grafic";
-            this.tabPage_Grafic.Size = new System.Drawing.Size(737, 431);
+            this.tabPage_Grafic.Size = new System.Drawing.Size(868, 431);
             this.tabPage_Grafic.TabIndex = 3;
             this.tabPage_Grafic.Text = "GraficKcal";
             this.tabPage_Grafic.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(363, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(313, 43);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Comanda";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // id_produs
             // 
@@ -334,6 +335,8 @@
             // 
             this.adauga.HeaderText = "adauga";
             this.adauga.Name = "adauga";
+            this.adauga.Text = "adauga";
+            this.adauga.UseColumnTextForButtonValue = true;
             // 
             // Optiuni
             // 

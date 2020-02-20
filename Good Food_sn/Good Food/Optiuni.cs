@@ -46,22 +46,22 @@ namespace Good_Food
 
             this.textBox_Necesar.Text = kcal.ToString();
             client.updateClient(kcal,GLOBAL.GlobalClientid);
-            //update db
-            //this.dataGridView1.DataSource=
-            
+        }
 
-            //DataGridView dgv = new DataGridView();
-            //dgv.DataSource = dtusers;
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+            // e.RowIndex >= 0)
+            //{
+            //    //TODO - Button Clicked - Execute Code Here
+            //}
 
-            //DataGridViewColumn amount = new DataGridViewColumn();
-            //amount.HeaderText = "Amount";
-            //amount.Name = "Amount";
-            //dgv.Columns.Insert(0, amount);
+            if (this.dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                MessageBox.Show(this.dataGridView1.Columns[e.ColumnIndex].ToString());
+                MessageBox.Show(e.ColumnIndex.ToString());
+            }
 
-            //DataGridViewColumn narration = new DataGridViewColumn();
-            //narration.HeaderText = "Narration";
-            //narration.Name = "Narration";
-           // dgv.Columns.Insert(0, narration);
         }
     }
 }
