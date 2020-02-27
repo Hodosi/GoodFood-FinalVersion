@@ -47,17 +47,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage_Meniu = new System.Windows.Forms.TabPage();
             this.tabPage_Grafic = new System.Windows.Forms.TabPage();
-            this.id_produs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.denumire_produs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriere = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pret = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kcal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.felul = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantitate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adauga = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage_CalulatorKcal.SuspendLayout();
             this.tabPage_Comanda.SuspendLayout();
@@ -77,6 +69,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(876, 468);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage_CalulatorKcal
             // 
@@ -174,6 +167,7 @@
             // 
             // tabPage_Comanda
             // 
+            this.tabPage_Comanda.Controls.Add(this.dataGridView1);
             this.tabPage_Comanda.Controls.Add(this.button1);
             this.tabPage_Comanda.Controls.Add(this.textBox_PretTotal);
             this.tabPage_Comanda.Controls.Add(this.textBox_totalKcal);
@@ -181,7 +175,6 @@
             this.tabPage_Comanda.Controls.Add(this.label7);
             this.tabPage_Comanda.Controls.Add(this.label6);
             this.tabPage_Comanda.Controls.Add(this.label5);
-            this.tabPage_Comanda.Controls.Add(this.dataGridView1);
             this.tabPage_Comanda.Location = new System.Drawing.Point(4, 33);
             this.tabPage_Comanda.Name = "tabPage_Comanda";
             this.tabPage_Comanda.Padding = new System.Windows.Forms.Padding(3);
@@ -252,25 +245,6 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Necesar Zilnic:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_produs,
-            this.denumire_produs,
-            this.descriere,
-            this.pret,
-            this.kcal,
-            this.felul,
-            this.cantitate,
-            this.adauga});
-            this.dataGridView1.Location = new System.Drawing.Point(8, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(851, 278);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // tabPage_Meniu
             // 
             this.tabPage_Meniu.Location = new System.Drawing.Point(4, 33);
@@ -290,53 +264,13 @@
             this.tabPage_Grafic.Text = "GraficKcal";
             this.tabPage_Grafic.UseVisualStyleBackColor = true;
             // 
-            // id_produs
+            // dataGridView1
             // 
-            this.id_produs.HeaderText = "id_produs";
-            this.id_produs.Name = "id_produs";
-            this.id_produs.ReadOnly = true;
-            // 
-            // denumire_produs
-            // 
-            this.denumire_produs.HeaderText = "denumire_produs";
-            this.denumire_produs.Name = "denumire_produs";
-            this.denumire_produs.ReadOnly = true;
-            // 
-            // descriere
-            // 
-            this.descriere.HeaderText = "descriere";
-            this.descriere.Name = "descriere";
-            this.descriere.ReadOnly = true;
-            // 
-            // pret
-            // 
-            this.pret.HeaderText = "pret";
-            this.pret.Name = "pret";
-            this.pret.ReadOnly = true;
-            // 
-            // kcal
-            // 
-            this.kcal.HeaderText = "kcal";
-            this.kcal.Name = "kcal";
-            this.kcal.ReadOnly = true;
-            // 
-            // felul
-            // 
-            this.felul.HeaderText = "felul";
-            this.felul.Name = "felul";
-            this.felul.ReadOnly = true;
-            // 
-            // cantitate
-            // 
-            this.cantitate.HeaderText = "cantitate";
-            this.cantitate.Name = "cantitate";
-            // 
-            // adauga
-            // 
-            this.adauga.HeaderText = "adauga";
-            this.adauga.Name = "adauga";
-            this.adauga.Text = "adauga";
-            this.adauga.UseColumnTextForButtonValue = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(857, 150);
+            this.dataGridView1.TabIndex = 8;
             // 
             // Optiuni
             // 
@@ -380,16 +314,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_produs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn denumire_produs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriere;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pret;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kcal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn felul;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantitate;
-        private System.Windows.Forms.DataGridViewButtonColumn adauga;
+        private System.Windows.Forms.DataGridView dataGridView1;
 
     }
 }

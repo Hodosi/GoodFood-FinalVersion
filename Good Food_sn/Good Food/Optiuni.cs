@@ -16,6 +16,7 @@ namespace Good_Food
             InitializeComponent();
         }
         CLIENT client = new CLIENT();
+        MENIU meniu = new MENIU();
 
         private void Optiuni_Load(object sender, EventArgs e)
         {
@@ -60,8 +61,25 @@ namespace Good_Food
             {
                 MessageBox.Show(this.dataGridView1.Columns[e.ColumnIndex].ToString());
                 MessageBox.Show(e.ColumnIndex.ToString());
+                
             }
 
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            //this.dataGridView1.DataSource = meniu.getMeniu();
+            DataTable table = meniu.getMeniu();
+            table.Columns.Add("cantitate",typeof(int),"1");
+            DataGridViewButtonColumn col = new DataGridViewButtonColumn();
+            //col.UseColumnTextForButtonValue = true;   
+            //col.HeaderText = "Adauga";
+            //---------------------------
+            //table.Columns.Add("Adauga",typeof(DataGridViewButtonColumn));
+            //table.Columns.Add(new DataColumn("Adauga",typeof(System.Windows.Forms.Button)));
+            //add button column!!!!
+
+            this.dataGridView1.DataSource = table;
         }
     }
 }
