@@ -49,37 +49,57 @@ namespace Good_Food
             client.updateClient(kcal,GLOBAL.GlobalClientid);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            //if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-            // e.RowIndex >= 0)
+            DataTable table = meniu.getMeniu();
+            this.dataGridView1.Rows[0].Cells[1].Value = "1";
+            //for (int i = 0; i < table.Rows.Count; i++)
             //{
-            //    //TODO - Button Clicked - Execute Code Here
+            //    MessageBox.Show(i.ToString());
+            //    this.dataGridView1.Rows[i].Cells[1].Value = "1";
             //}
 
-            if (this.dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
-            {
-                MessageBox.Show(this.dataGridView1.Columns[e.ColumnIndex].ToString());
-                MessageBox.Show(e.ColumnIndex.ToString());
-                
-            }
+            this.textBox_NecesarZilnic.Text = this.textBox_Necesar.Text;
+
+            table.DefaultView.AllowEdit = false;
+            // table.Columns.Add("cantitate",typeof(int),"1");
+            // DataColumn column = new DataColumn("cantitate1", typeof(string));
+            //column.DefaultValue = "1";
+            //table.Columns.Add(column);
+            this.dataGridView1.DataSource = table;
 
         }
 
-        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            //this.dataGridView1.DataSource = meniu.getMeniu();
-            DataTable table = meniu.getMeniu();
-            table.Columns.Add("cantitate",typeof(int),"1");
-            DataGridViewButtonColumn col = new DataGridViewButtonColumn();
-            //col.UseColumnTextForButtonValue = true;   
-            //col.HeaderText = "Adauga";
-            //---------------------------
-            //table.Columns.Add("Adauga",typeof(DataGridViewButtonColumn));
-            //table.Columns.Add(new DataColumn("Adauga",typeof(System.Windows.Forms.Button)));
-            //add button column!!!!
+            if (e.ColumnIndex == 0)
+            {
+                int cantitate = int.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                if (cantitate < 1)
+                {
+                    MessageBox.Show("Cantitate negativa");
+                    return;
+                }
+                int pret = int.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
+                int kcal = int.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString());
+                pret *= cantitate;
+                kcal *= cantitate;
+                int pret_curent = int.Parse(this.textBox_PretTotal.Text);
+                int kcal_curent = int.Parse(this.textBox_totalKcal.Text);
+                pret_curent += pret;
+                kcal_curent += kcal;
+                this.textBox_totalKcal.Text = kcal_curent.ToString();
+                this.textBox_PretTotal.Text = pret_curent.ToString();
 
-            this.dataGridView1.DataSource = table;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vizualizare_comanda frmVizComand = new Vizualizare_comanda();
+            frmVizComand.ShowDialog();
+            this.Close();
         }
     }
 }

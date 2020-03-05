@@ -35,3 +35,14 @@ C:\Users\User\Desktop\Olimp\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Fo
 C:\Users\User\Desktop\Olimp\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Optiuni.resources
 C:\Users\User\Desktop\Olimp\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Properties.Resources.resources
 C:\Users\User\Desktop\Olimp\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good Food.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good Food.exe
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good Food.pdb
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\bin\Debug\Good Food.exe
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\bin\Debug\Good Food.pdb
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Autentificare_client.resources
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Creare_cont_client.resources
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Start.resources
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Optiuni.resources
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good_Food.Properties.Resources.resources
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good Food.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Olimipada\Csharp-Olimpiada-2016-Good-Food\Good Food_sn\Good Food\obj\x86\Debug\Good Food.csprojResolveAssemblyReference.cache

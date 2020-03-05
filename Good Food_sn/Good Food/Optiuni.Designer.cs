@@ -40,6 +40,7 @@
             this.textBox_Varsta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage_Comanda = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox_PretTotal = new System.Windows.Forms.TextBox();
             this.textBox_totalKcal = new System.Windows.Forms.TextBox();
@@ -49,7 +50,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage_Meniu = new System.Windows.Forms.TabPage();
             this.tabPage_Grafic = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Adauga = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Cantitate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage_CalulatorKcal.SuspendLayout();
             this.tabPage_Comanda.SuspendLayout();
@@ -183,6 +185,19 @@
             this.tabPage_Comanda.Text = "Comanda";
             this.tabPage_Comanda.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Adauga,
+            this.Cantitate});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(857, 268);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(363, 338);
@@ -191,6 +206,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Comanda";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox_PretTotal
             // 
@@ -264,13 +280,15 @@
             this.tabPage_Grafic.Text = "GraficKcal";
             this.tabPage_Grafic.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // Adauga
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(857, 150);
-            this.dataGridView1.TabIndex = 8;
+            this.Adauga.HeaderText = "Adauga";
+            this.Adauga.Name = "Adauga";
+            // 
+            // Cantitate
+            // 
+            this.Cantitate.HeaderText = "Cantitate";
+            this.Cantitate.Name = "Cantitate";
             // 
             // Optiuni
             // 
@@ -316,6 +334,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewButtonColumn Adauga;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantitate;
 
     }
 }
