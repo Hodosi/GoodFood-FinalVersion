@@ -17,7 +17,7 @@ namespace Good_Food
         }
         CLIENT client = new CLIENT();
         MENIU meniu = new MENIU();
-
+        Vizualizare_comanda frmViz = new Vizualizare_comanda();
         private void Optiuni_Load(object sender, EventArgs e)
         {
 
@@ -90,15 +90,32 @@ namespace Good_Food
                 kcal_curent += kcal;
                 this.textBox_totalKcal.Text = kcal_curent.ToString();
                 this.textBox_PretTotal.Text = pret_curent.ToString();
+                //---------------------------------------------------
+                frmViz.textBox_NecesarZilnic_e.Text = this.textBox_NecesarZilnic.Text;
+                frmViz.textBox_totalKcal_e.Text = this.textBox_totalKcal.Text;
+                frmViz.textBox_PretTotal_e.Text = this.textBox_PretTotal.Text;
+                //frmViz.ShowDialog();
+                //----------------------------------------------------
+                int index = frmViz.dataGridView_e.Rows.Count;
+                index--;
+                DataGridViewRowCollection row = frmViz.dataGridView_e.Rows;
+                string[] ob = new string[5];
+                ob[0] = this.dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                ob[1] = this.dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                ob[2] = this.dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                ob[3] = this.dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                ob[4] = this.dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                row.Insert(index, ob);
+
 
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_comanda_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vizualizare_comanda frmVizComand = new Vizualizare_comanda();
-            frmVizComand.ShowDialog();
+            //Vizualizare_comanda frmVizComand = new Vizualizare_comanda();
+            frmViz.ShowDialog();
             this.Close();
         }
     }

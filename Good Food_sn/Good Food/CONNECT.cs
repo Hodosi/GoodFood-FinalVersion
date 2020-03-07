@@ -9,7 +9,7 @@ namespace Good_Food
 {
     class CONNECT
     {
-        public static string constring = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|GOOD_FOOD.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+        public static string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|GOOD_FOOD.mdf;Integrated Security=True;Connect Timeout=30";
 
         SqlConnection conn = new SqlConnection(constring);
 

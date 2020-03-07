@@ -30,10 +30,13 @@ namespace Good_Food
 
             if (client.clientExists(email,pass))
             {
+                this.Hide();
                 int id = client.getClientId(email);
+                //MessageBox.Show(id.ToString());
                 GLOBAL.GlobalClientid = id;
                 Optiuni op = new Optiuni();
                 op.ShowDialog();
+                this.Close();
             }
             else
             {

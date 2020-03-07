@@ -49,8 +49,10 @@ namespace Good_Food
             }
             else
             {
+
                 client.insertClient(nume, prenume, pass, address, email);
                 MessageBox.Show("client added!");
+                this.Close();
             }
 
         }

@@ -75,14 +75,18 @@ namespace Good_Food
 
         private void button_Inregistrare_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Creare_cont_client cl=new Creare_cont_client();
             cl.ShowDialog();
+            this.Show();
         }
 
         private void button_Autentificare_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Autentificare_client aut = new Autentificare_client();
             aut.ShowDialog();
+            this.Close();
         }
 
     }

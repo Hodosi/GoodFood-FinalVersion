@@ -53,6 +53,7 @@
       <DependentUpon>Autentificare_client.cs</DependentUpon>
     </Compile>
     <Compile Include="CLIENT.cs" />
+    <Compile Include="COMANDA.cs" />
     <Compile Include="CONNECT.cs" />
     <Compile Include="Creare_cont_client.cs">
       <SubType>Form</SubType>
@@ -103,6 +104,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vizualizare comanda.resx">
+      <DependentUpon>Vizualizare comanda.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
