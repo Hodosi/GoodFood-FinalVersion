@@ -23,6 +23,21 @@ namespace Good_Food
 
             return Convert.ToInt32(table.Rows.Count);
         }
+        public DataTable getSubcomenzi(int id)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "Select id_produs From Subcomenzi INNER JOIN Comenzi ON Comenzi.id_comanda=Subcomenzi.id_comanda WHERE Comenzi.id_client=@id ";
+            command.Connection = conn.getConnection();
+
+            command.Parameters.Add("id", SqlDbType.Int).Value = id;
+            
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            return table;
+        }
 
         public void insertComanda(int idClient, DateTime dataC)
         {

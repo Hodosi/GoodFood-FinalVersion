@@ -26,8 +26,22 @@ namespace Good_Food
             adapter.Fill(table);
 
             return Convert.ToInt32(table.Rows[0][0].ToString());
+        }
 
+        public int getClientKcal(int id)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "Select kcal_zilnice From  Clienti Where id_client=@id ";
+            command.Connection = conn.getConnection();
 
+            command.Parameters.Add("id", SqlDbType.Int).Value = id;
+
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            return Convert.ToInt32(table.Rows[0][0].ToString());
         }
 
         public bool emailExists(string email)
