@@ -71,7 +71,7 @@
             this.button_finalizare.Name = "button_finalizare";
             this.button_finalizare.Size = new System.Drawing.Size(417, 53);
             this.button_finalizare.TabIndex = 13;
-            this.button_finalizare.Text = "Finalizare";
+            this.button_finalizare.Text = "Finish";
             this.button_finalizare.UseVisualStyleBackColor = true;
             this.button_finalizare.Click += new System.EventHandler(this.button_finalizare_Click);
             // 
@@ -107,17 +107,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(69, 380);
+            this.label7.Location = new System.Drawing.Point(60, 379);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 29);
+            this.label7.Size = new System.Drawing.Size(134, 29);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Pret Total:";
+            this.label7.Text = "Total price:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(65, 328);
+            this.label6.Location = new System.Drawing.Point(67, 327);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 29);
@@ -127,16 +127,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 278);
+            this.label5.Location = new System.Drawing.Point(16, 277);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 29);
+            this.label5.Size = new System.Drawing.Size(178, 29);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Necesar Zilnic:";
+            this.label5.Text = "Required Daily:";
             // 
             // dataGridView_e
             // 
-            this.dataGridView_e.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_e.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView_e.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_e.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdC,
@@ -156,17 +156,19 @@
             // 
             // IdC
             // 
-            this.IdC.HeaderText = "IdC";
+            this.IdC.HeaderText = "Id";
             this.IdC.MinimumWidth = 6;
             this.IdC.Name = "IdC";
             this.IdC.ReadOnly = true;
+            this.IdC.Width = 62;
             // 
             // Nume
             // 
-            this.Nume.HeaderText = "Nume";
+            this.Nume.HeaderText = "Name";
             this.Nume.MinimumWidth = 6;
             this.Nume.Name = "Nume";
             this.Nume.ReadOnly = true;
+            this.Nume.Width = 107;
             // 
             // Kcal
             // 
@@ -174,28 +176,32 @@
             this.Kcal.MinimumWidth = 6;
             this.Kcal.Name = "Kcal";
             this.Kcal.ReadOnly = true;
+            this.Kcal.Width = 89;
             // 
             // Pret
             // 
-            this.Pret.HeaderText = "Pret";
+            this.Pret.HeaderText = "Price";
             this.Pret.MinimumWidth = 6;
             this.Pret.Name = "Pret";
             this.Pret.ReadOnly = true;
+            this.Pret.Width = 98;
             // 
             // Cantitate
             // 
-            this.Cantitate.HeaderText = "Cantitate";
+            this.Cantitate.HeaderText = "Quantity";
             this.Cantitate.MinimumWidth = 6;
             this.Cantitate.Name = "Cantitate";
             this.Cantitate.ReadOnly = true;
             this.Cantitate.ToolTipText = "1";
+            this.Cantitate.Width = 129;
             // 
             // Elimina
             // 
-            this.Elimina.HeaderText = "Elimina";
+            this.Elimina.HeaderText = "Remove";
             this.Elimina.MinimumWidth = 6;
             this.Elimina.Name = "Elimina";
-            this.Elimina.Text = "Elimina";
+            this.Elimina.Text = "Remove";
+            this.Elimina.Width = 109;
             // 
             // Vizualizare_comanda
             // 
@@ -203,10 +209,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 425);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Vizualizare_comanda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vizualizare_comanda";
-            this.Load += new System.EventHandler(this.Vizualizare_comanda_Load);
+            this.Text = "View Order";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_e)).EndInit();

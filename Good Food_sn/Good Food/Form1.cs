@@ -58,7 +58,6 @@ namespace Good_Food
 
                 if (siruri[0].Trim() != "")
                 {
-                    //MessageBox.Show(siruri[0].Trim());
                     command.Parameters.Add("id", SqlDbType.Int).Value = Convert.ToInt32(siruri[0].Trim());
                     command.Parameters.Add("nume", SqlDbType.VarChar).Value = siruri[1].ToString();
                     command.Parameters.Add("desc", SqlDbType.NText).Value = siruri[2].ToString();

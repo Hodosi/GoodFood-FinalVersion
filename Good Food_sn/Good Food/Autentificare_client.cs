@@ -18,11 +18,6 @@ namespace Good_Food
 
         CLIENT client = new CLIENT();
 
-        private void Autentificare_client_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_Intra_Click(object sender, EventArgs e)
         {
             string email = this.textBox_email_Aut.Text;
@@ -32,8 +27,8 @@ namespace Good_Food
             {
                 this.Hide();
                 int id = client.getClientId(email);
-                //MessageBox.Show(id.ToString());
                 GLOBAL.GlobalClientid = id;
+                this.Hide();
                 Optiuni op = new Optiuni();
                 op.ShowDialog();
                 this.Close();
@@ -42,7 +37,7 @@ namespace Good_Food
             {
                 this.textBox_email_Aut.ResetText();
                 this.textBox_pass_Aut.ResetText();
-                MessageBox.Show("Eroare autentificare!");
+                MessageBox.Show("Login error!");
             }
         }
     }

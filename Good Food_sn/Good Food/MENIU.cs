@@ -15,7 +15,7 @@ namespace Good_Food
         public DataTable getMeniu()
         {
             SqlCommand command = new SqlCommand();
-            command.CommandText = "Select * From  Meniu ";
+            command.CommandText = "Select id_produs As Id, denumire_Produs As Name, descriere As Description, Pret As Price, kcal As Kcal, Felul As Type From  Meniu ";
             command.Connection = conn.getConnection();
 
             DataTable table = new DataTable();

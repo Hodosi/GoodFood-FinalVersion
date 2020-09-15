@@ -43,23 +43,18 @@ namespace Good_Food
             int idProd, cant;
             int rcont = this.dataGridView_e.Rows.Count;
             rcont--;
-            MessageBox.Show(rcont.ToString());
+            //MessageBox.Show(rcont.ToString());
             for (int i = 0; i < rcont; i++)
             {
                 idProd = int.Parse(this.dataGridView_e.Rows[i].Cells[0].Value.ToString());
                 cant = int.Parse(this.dataGridView_e.Rows[i].Cells[4].Value.ToString());
                 comand.insertSubComanda(idComanda, idProd, cant);
             }
-            MessageBox.Show("Comanda trimisa!");
+            MessageBox.Show("Command sent!");
             this.Hide();
             Start frmStart = new Start();
             frmStart.ShowDialog();
             this.Close();
-
-        }
-
-        private void Vizualizare_comanda_Load(object sender, EventArgs e)
-        {
 
         }
     }

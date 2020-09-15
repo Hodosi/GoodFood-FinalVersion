@@ -56,19 +56,11 @@ namespace Good_Food
         {
             DataTable table = meniu.getMeniu();
             this.dataGridView1.Rows[0].Cells[1].Value = "1";
-            //for (int i = 0; i < table.Rows.Count; i++)
-            //{
-            //    MessageBox.Show(i.ToString());
-            //    this.dataGridView1.Rows[i].Cells[1].Value = "1";
-            //}
 
             this.textBox_NecesarZilnic.Text = this.textBox_Necesar.Text;
 
             table.DefaultView.AllowEdit = false;
-            // table.Columns.Add("cantitate",typeof(int),"1");
-            // DataColumn column = new DataColumn("cantitate1", typeof(string));
-            //column.DefaultValue = "1";
-            //table.Columns.Add(column);
+
             this.dataGridView1.DataSource = table;
 
         }
@@ -77,10 +69,19 @@ namespace Good_Food
         {
             if (e.ColumnIndex == 0)
             {
-                int cantitate = int.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                int cantitate = 1;
+                try
+                {
+                    cantitate = int.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Enter the Quantity");
+                    return;
+                }
                 if (cantitate < 1)
                 {
-                    MessageBox.Show("Cantitate negativa");
+                    MessageBox.Show("Negative amount");
                     return;
                 }
                 int pret = int.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
@@ -97,7 +98,6 @@ namespace Good_Food
                 frmViz.textBox_NecesarZilnic_e.Text = this.textBox_NecesarZilnic.Text;
                 frmViz.textBox_totalKcal_e.Text = this.textBox_totalKcal.Text;
                 frmViz.textBox_PretTotal_e.Text = this.textBox_PretTotal.Text;
-                //frmViz.ShowDialog();
                 //----------------------------------------------------
                 int index = frmViz.dataGridView_e.Rows.Count;
                 index--;
@@ -115,7 +115,6 @@ namespace Good_Food
         private void button_comanda_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //Vizualizare_comanda frmVizComand = new Vizualizare_comanda();
             frmViz.ShowDialog();
             this.Close();
         }
@@ -194,7 +193,7 @@ namespace Good_Food
                     cant = 1;
                     comand.insertSubComanda(idComanda, idProd, cant);
                 }
-                MessageBox.Show("Comanda trimisa!");
+                MessageBox.Show("Command sent!");
                 // this.Hide();
                 // Start frmStart = new Start();
                 // frmStart.ShowDialog();

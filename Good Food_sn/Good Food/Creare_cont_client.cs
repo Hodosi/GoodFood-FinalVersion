@@ -34,11 +34,11 @@ namespace Good_Food
 
             if (pass != confirm_pass)
             {
-                MessageBox.Show("diff pass!");
+                MessageBox.Show("The passwords are different!");
             }
             else if (client.emailExists(email))
             {
-                MessageBox.Show("email exist!");
+                MessageBox.Show("E-mail exist!");
                 this.textBox_Nume.ResetText();
                 this.textBox_Parola.ResetText();
                 this.textBox_Prenume.ResetText();
@@ -51,10 +51,21 @@ namespace Good_Food
             {
 
                 client.insertClient(nume, prenume, pass, address, email);
-                MessageBox.Show("client added!");
+                MessageBox.Show("Client added!");
+                this.Hide();
+                Start frm = new Start();
+                frm.ShowDialog();
                 this.Close();
             }
 
+        }
+
+        private void button_back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Start frm = new Start();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }
