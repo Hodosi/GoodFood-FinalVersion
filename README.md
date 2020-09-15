@@ -1,7 +1,7 @@
   # GoodFood-FinalVersion
   GoodFood, an application to ease customer orders at a restaurant, made by using C#, SQL and Windows Forms
   
-     **Demo Video:**
+   **Demo Video:**
 https://www.youtube.com/watch?v=Htj0W0cwyJk&feature=youtu.be
    
    **Code Path**
@@ -9,8 +9,9 @@ https://www.youtube.com/watch?v=Htj0W0cwyJk&feature=youtu.be
 
    **The Game**
    # Demo Login:
-     ### E-mail: client1
-     ### Password: client1
+   ### E-mail: client1
+   ### Password: client1
+   
 ![Image of Game](https://github.com/Hodosi/GoodFood-FinalVersion/blob/master/readmeResources/2020-09-15%20(22).png)
 ![Image of Game](https://github.com/Hodosi/GoodFood-FinalVersion/blob/master/readmeResources/2020-09-15%20(23).png)
 ![Image of Game](https://github.com/Hodosi/GoodFood-FinalVersion/blob/master/readmeResources/2020-09-15%20(24).png)
